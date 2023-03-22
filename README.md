@@ -5,7 +5,7 @@ Documentation: https://site.mockito.org/
 ### Why do you need mocks?
 
 -	Sometimes it is just difficult to test a component, because it depends on other components which are not available
--	In general, while unit testing, you should focus on testing and don’t care about if other components work properly
+-	In general, while unit testing, you should focus on testing and don’t care about other components working properly
 -	You want to avoid side effects of making actual calls. e.g. Any modification in database
 -   Mocks are fake Java classes that replace these external dependencies. These fake classes are then instructed before the test starts to behave as you expect.
 
@@ -75,8 +75,6 @@ verify(daoSpy).save(any(Customer.class));
 ### Exercise 1
 1. Add dependencies to the project. You need: junit-jupiter-api, mockito-junit-jupiter, mockito-core.
 2. Look at the structure of the project. Imagine that all the components that you have in `external` package are the one relying on some external service.
-
-You have following tasks to accomplish:
 3. Finish the implementation of `WareHouse`
 4. Write one or more test cases for the `WareHouse` with following requirements:
 - Use Mock dependencies as needed.
